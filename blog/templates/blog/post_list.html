@@ -1,12 +1,17 @@
 <html>
     <head>
-        <title>Abinash Blog</title>
+        <title>Abinash blog</title>
     </head>
     <body>
         <div>
-            <h1>POSTS</h1>
-            <h2>POST1</h2>
-            <h3>POST2</h3>
+            <h1><a href="/">Abinash Blog</a></h1>
+        </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     </body>
-  </html>
-
+</html>
